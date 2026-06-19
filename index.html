@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hammam Malabeh Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#intro" class="active">Intro</a></li>
+                <li><a href="#qualifications">Qualifications</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <!-- تعديل النص الظاهر فقط مع الحفاظ على الـ href لضمان عمل السكرول -->
+                <li><a href="#impact">Projects</a></li>
+                <li><a href="#work">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="intro" class="section light-bg">
+            <div class="content-wrapper intro-grid">
+                
+                <div class="text-block">
+                    <h1>I'M HAMMAM MALABEH,<br>AT YOUR SERVICE!</h1>
+                    <p class="subtitle">SOFTWARE ENGINEER & FULL-STACK DEVELOPER & DATA ANALYSIS ENTHUSIAST</p>
+                    
+                    <p class="intro-description" style="font-size: 15px; line-height: 1.7; opacity: 0.85; margin-bottom: 35px; text-align: justify; font-weight: 400; max-width: 600px; color: #333;">
+                        A passionate Software Engineering graduate focused on building scalable web applications and intuitive mobile experiences. Specialized in crafting robust backend architectures with .NET Core and developing cross-platform mobile solutions. Driven by turning complex business logic into clean, efficient, and user-centric code.
+                    </p>
+                    
+                    <a href="docs/Hammam Al-MalabehCV.pdf" target="_blank" class="btn">VIEW MY RESUME</a>
+                </div>
+                
+                <div class="image-block polygon-container">
+                    <img src="images/2948.JPG" alt="Hammam Malabeh" class="polygon-photo">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 2. QUALIFICATIONS & CERTIFICATIONS SECTION -->
+        <section id="qualifications" class="section dark-bg">
+            <div class="content-wrapper centered-text">
+                <h2>I'M VERY QUALIFIED TO HELP.</h2>
+                <p class="lead-text">
+                    As a Software Engineer graduated from Zarqa University, I deliver data-informed, user-centric
+                    technological solutions backed by continuous learning and industry-recognized certifications.
+                </p>
+
+                <!-- شبكة عرض الشهادات الـ 8 التفاعلية -->
+                <div class="certifications-container">
+
+                    <!-- الشهادة 1: البكالوريوس -->
+                    <div class="cert-card" onclick="openModal('images/university_cert.jpg')">
+                        <i class="fas fa-graduation-cap cert-icon"></i>
+                        <h3>B.Sc. Software Engineering</h3>
+                        <p>Zarqa University</p>
+                        <span class="view-cert-btn"><i class="fas fa-eye"></i> View Certificate</span>
+                    </div>
+
+                    <!-- الشهادة 2: تدريب الباك إند -->
+                    <div class="cert-card" onclick="openModal('images/Sky_Software.jpg')">
+                        <i class="fas fa-code cert-icon"></i>
+                        <h3>Back-End Engineering Intern</h3>
+                        <p>Sky Software</p>
+                        <span class="view-cert-btn"><i class="fas fa-eye"></i> View Certificate</span>
+                    </div>
+
+                    <!-- الشهادة 3: تدريب تحليل البيانات -->
+                    <div class="cert-card" onclick="openModal('images/Parachute16.PNG')">
+                        <i class="fas fa-chart-bar cert-icon"></i>
+                        <h3>Data Analysis Intern</h3>
+                        <p>Parachute 16</p>
+                        <span class="view-cert-btn"><i class="fas fa-eye"></i> View Certificate</span>
+                    </div>
+
+                    <!-- الشهادة 4: الهاكاثون الوطني -->
+                    <div class="cert-card" onclick="openModal('images/BuildWithAi.PNG')">
+                        <i class="fas fa-trophy cert-icon"></i>
+                        <h3>Build with AI Hackathon</h3>
+                        <p>National 8th Ranking</p>
+                        <span class="view-cert-btn"><i class="fas fa-eye"></i> View Certificate</span>
+                    </div>
+
+                    <!-- الشهادة 5: شهادة تقنية إضافية (مثال: دوت نت أو سي شارب) -->
+                    <div class="cert-card" onclick="openModal('images/TheHope.PNG')">
+                        <i class="fas fa-certificate cert-icon"></i>
+                        <h3>ASP.NET Core Advanced</h3>
+                        <p>The Hope International Company</p>
+                        <span class="view-cert-btn"><i class="fas fa-eye"></i> View Certificate</span>
+                    </div>
+
+                    <!-- Mafraq Hackathon-->
+                    <div class="cert-card" onclick="openModal('images/Mafraq_Hackathon.PNG')">
+                        <i class="fas fa-trophy cert-icon"></i>
+                        <h3>Mafraq Hackathon</h3>
+                        <p>AFAQ</p>
+                        <span class="view-cert-btn"><i class="fas fa-eye"></i> View Certificate</span>
+                    </div>
+
+
+                    <!-- الشهادة 8: شهادة مهارة برمجية أخرى -->
+                    <div class="cert-card" onclick="openModal('images/EndPoint.PNG')">
+                        <i class="fas fa-tools cert-icon"></i>
+                        <h3>Endpoint Security</h3>
+                        <p>Cisco</p>
+                        <span class="view-cert-btn"><i class="fas fa-eye"></i> View Certificate</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- النافذة المنبثقة الشاملة لعرض أي صورة شهادة يتم الضغط عليها -->
+        <div id="certModal" class="modal" onclick="closeModal()">
+            <span class="close-modal">&times;</span>
+            <img class="modal-content" id="imgTarget">
+        </div>
+
+
+        <!-- 3. SERVICES & EXPERTISE SECTION -->
+        <section id="expertise" class="section light-bg">
+            <div class="content-wrapper expertise-grid">
+                <div class="text-block-large">
+                    <h2>WHAT CAN<br>I DO FOR<br>YOU?</h2>
+                </div>
+                <div class="vertical-divider"></div>
+                <div class="expertise-details">
+                    <!-- المجموعة الأولى: اللغات وإطارات العمل -->
+                    <div class="expertise-group">
+                        <h3>TECHNICAL SKILLS</h3>
+                        <ul>
+                            <li><strong>Languages:</strong> C#, Java, Dart, Python, SQL, JavaScript</li>
+                            <li><strong>Frameworks:</strong> ASP.NET Core, Entity Framework Core, Flutter, ASP.NET MVC
+                            </li>
+                            <li><strong>Databases:</strong> SQL Server, Firebase (Firestore), MySQL, SQLite</li>
+                        </ul>
+                    </div>
+                    <!-- المجموعة الثانية: أدوات البيانات والمنهجيات -->
+                    <div class="expertise-group">
+                        <h3>DATA & TOOLS</h3>
+                        <ul>
+                            <li><strong>Data & BI Tools:</strong> Python (Pandas, NumPy), Power BI, EDA, Data
+                                Visualization</li>
+                            <li><strong>Tools & Methods:</strong> Git, RESTful APIs, Clean Architecture, Agile/Scrum,
+                                CI/CD, Figma</li>
+                            <li><strong>Core Competencies:</strong> Full-Stack Development, Mobile Development, System
+                                Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 4. FEATURED PROJECTS SECTION -->
+        <section id="impact" class="section dark-bg">
+            <div class="content-wrapper centered-heading">
+                <h2>FEATURED PROJECTS</h2>
+            </div>
+            <div class="content-wrapper testimonials-grid">
+
+                <!-- المشروع الأول: RoadK -->
+                <div class="testimonial-card">
+                    <div class="avatar-container">
+                        <!-- يمكنك وضع لقطة شاشة للموبايل أو شعار المشروع هنا -->
+                        <img src="images/IMG_5649.jpeg" alt="RoadK App">
+                    </div>
+                    <h4>RoadK - Infrastructure App</h4>
+                    <p>A dual-role full-stack mobile application built with Flutter and Firebase for citizens and
+                        municipal admins to report road infrastructure issues in real-time.</p>
+                </div>
+
+                <!-- المشروع الثاني: Eshara -->
+                <div class="testimonial-card">
+                    <div class="avatar-container">
+                        <img src="images/Eshara.png" alt="Eshara System">
+                    </div>
+                    <h4>Eshara - AI Sign Language</h4>
+                    <p>An AI-powered sign language translation system that achieved 8th national ranking in the Build
+                        with AI Hackathon, built using Python and ASP.NET MVC.</p>
+                </div>
+
+                <!-- المشروع الثالث: Vacation Workflow System -->
+                <div class="testimonial-card">
+                    <div class="avatar-container">
+                        <img src="images/vacation_project.jpg" alt="Vacation System">
+                    </div>
+                    <h4>Vacation Workflow System</h4>
+                    <p>A production-level system built using ASP.NET Core and Entity Framework Core that automates
+                        multi-step leave approval processes with clean architecture.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5. WORK & CONTACT SECTION -->
+        <section id="work" class="section light-bg">
+            <div class="content-wrapper work-grid">
+
+                <!-- الصورة المضلعة الهندسية المعكوسة -->
+                <div class="image-block-large polygon-container-reverse">
+                    <img src="images/2949.JPG" alt="Contact Hammam">
+                </div>
+
+                <!-- تفاصيل التواصل والروابط المهنية للمطور -->
+                <div class="text-block-large contact-section">
+                    <h2>LET'S WORK TOGETHER!</h2>
+                    <p class="contact-subtitle">AVAILABLE FOR FULL-TIME OPPORTUNITIES AND RELEVANT PROJECTS.</p>
+
+                    <div class="contact-info-row">
+
+                        <!-- البريد الإلكتروني المهني -->
+                        <div class="info-column">
+                            <h5>EMAIL</h5>
+                            <p><a href="mailto:hmalabeh14@gmail.com"
+                                    style="text-decoration: none; color: inherit; opacity: 0.8;">hmalabeh14@gmail.com</a>
+                            </p>
+                        </div>
+
+                        <!-- الموقع الجغرافي الحالي -->
+                        <div class="info-column">
+                            <h5>LOCATION</h5>
+                            <p>Amman, Jordan</p>
+                        </div>
+
+                        <!-- الروابط والمنصات التقنية -->
+                        <div class="info-column">
+                            <h5>CONNECT</h5>
+                            <div class="social-icons">
+                                <!-- رابط لينكد إن الرسمي الخاص بك -->
+                                <a href="https://linkedin.com/in/iamhammam" target="_blank" title="LinkedIn"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                <!-- رابط غيت هاب لتستعرض من خلاله أكواد مشاريعك -->
+                                <a href="https://github.com/Imhammam" target="_blank" title="GitHub"><i
+                                        class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Hammam Malabeh Portfolio © 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
